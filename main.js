@@ -107,19 +107,19 @@ let myFavGames = {
 };
 
 // Code One => How To Get Object Length ?
-let objectLength = "???????";
+let objectLength = Object.keys(myFavGames).length;;
 
 for (let i = 0; i < objectLength; i++) {
-  console.log(`The Game Name Is ???????`);
-  console.log(`The Publisher Is ???????`);
-  console.log(`The Price Is ???????`);
+  console.log(`The Game Name Is ${Object.keys(myFavGames)[i]}`);
+  console.log(`The Publisher Is ${myFavGames[Object.keys(myFavGames)[i]].publisher}`);
+  console.log(`The Price Is ${myFavGames[Object.keys(myFavGames)[i]].price}`);
 
   // Check If Nested Object Has Property (bestThree)
-  if (???????) {
+  if (myFavGames[Object.keys(myFavGames)[i]].hasOwnProperty("bestThree")) {
     console.log("- Game Has Releases");
-    console.log(`First => ???????`);
-    console.log(`Second => ???????`);
-    console.log(`Third => ???????`);
+    console.log(`First => ${myFavGames[Object.keys(myFavGames)[i]].bestThree.one}`);
+    console.log(`Second => ${myFavGames[Object.keys(myFavGames)[i]].bestThree.two}`);
+    console.log(`Third => ${myFavGames[Object.keys(myFavGames)[i]].bestThree.three}`);
   }
   console.log("#".repeat(20));
 }
